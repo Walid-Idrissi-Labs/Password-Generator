@@ -74,7 +74,7 @@ for(let i=0 ; i<password_length ; i++)
     else
     {   
         //lower letter
-        if(seed[i]==="0" ||seed[i]==="1" ||seed[i]==="2"   )
+        if(seed[i]==="1" ||seed[i]==="2"   )
         {
             //random letter
             password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
@@ -86,7 +86,7 @@ for(let i=0 ; i<password_length ; i++)
         }
 
         //number
-        else if(seed[i]==="6" ||seed[i]==="7" || seed[i]=="8" )
+        else if(seed[i]==="6" ||seed[i]==="7" || seed[i]=="8" || seed[i]=="0" )
         {
             password+=numbers [Math.floor(Math.random()*numbers.length)] ;
         }
