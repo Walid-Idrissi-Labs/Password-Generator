@@ -17,6 +17,12 @@ const symbols = ["@", "/", "-", "_", "+", "&", "(", ")", "?", "!", ".", ",", ":"
 //const symbol_at = "@" ,symbol_slash="/" , dash="-" , underscore="_" , plus ="+" , and = "&" , par_open="(" , par_close=")" , qst = "?" , exc = "!" , dot ="." , comma="," , colon = ":" , semi_collon=";" , asterix ="*" ; 
 
 
+
+
+function randomArrayItem(array) {  return array[ Math.floor(Math.random()*array.length) ]; }
+
+
+
 let password ="";
 
 //function generate password(?)
@@ -28,7 +34,8 @@ for(let i=0 ; i<password_length ; i++)
         if(1)
         {
             //pick random letter from> the array
-            password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
+            // password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
+            password+=randomArrayItem(alphabet_lower);
         }
     }
     
@@ -38,12 +45,12 @@ for(let i=0 ; i<password_length ; i++)
         if(seed[i]==="0" ||seed[i]==="1" ||seed[i]==="2" ||seed[i]==="3" ||seed[i]==="4" )
         {
             //random letter
-            password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
+            password+=randomArrayItem(alphabet_lower) ;
         }
         else
         {
             //random number
-            password+=numbers [Math.floor(Math.random()*numbers.length)] ;
+            password+=randomArrayItem(numbers) ;
         }
 
     }
@@ -54,18 +61,18 @@ for(let i=0 ; i<password_length ; i++)
         if(seed[i]==="0" ||seed[i]==="1" ||seed[i]==="2" ||seed[i]==="3"  )
         {
             //random letter
-            password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
+            randomArrayItem(alphabet_lower);
         }
         //upp letter
         else if(seed[i]==="4" ||seed[i]==="5" ||seed[i]==="6" )
         {
-            password+=alphabet_upper [Math.floor(Math.random()*alphabet_upper.length)] ;
+            randomArrayItem(alphabet_upper);
         }
 
         else
         {
             //random number
-            password+=numbers [Math.floor(Math.random()*numbers.length)] ;
+            randomArrayItem(numbers)
         }
 
     }
@@ -77,24 +84,24 @@ for(let i=0 ; i<password_length ; i++)
         if(seed[i]==="1" ||seed[i]==="2"   )
         {
             //random letter
-            password+=alphabet_lower [Math.floor(Math.random()*alphabet_lower.length)] ;
+            randomArrayItem(alphabet_lower)
         }
         //upp letter
         else if(seed[i]==="3" ||seed[i]==="4" ||seed[i]==="5" )
         {
-            password+=alphabet_upper [Math.floor(Math.random()*alphabet_upper.length)] ;
+            randomArrayItem(alphabet_upper)
         }
 
         //number
         else if(seed[i]==="6" ||seed[i]==="7" || seed[i]=="8" || seed[i]=="0" )
         {
-            password+=numbers [Math.floor(Math.random()*numbers.length)] ;
+            randomArrayItem(numbers)
         }
 
         else
         {
             //random number
-            password+=symbols [Math.floor(Math.random()*symbols.length)] ;
+            randomArrayItem(symbols);
         }
     }
 
