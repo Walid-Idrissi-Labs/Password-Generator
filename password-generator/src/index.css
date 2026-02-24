@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sekuya&display=swap");
+
+
+@theme {
+  --color-test: #7c3aed;
+  --font-jetbrains: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-major-mono: "Major Mono Display", monospace;
+}
+
+html {
+  background-color: black;
+}
